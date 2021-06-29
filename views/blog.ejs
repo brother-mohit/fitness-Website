@@ -1,0 +1,175 @@
+<html>
+<head>
+    <title>Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--<link rel="stylesheet" type="text/css" href="stylesheet.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/17c7962084.js"></script>
+    <link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+<body id="body" background="pics/signin.jpg">
+<form >
+
+
+<!--  navbar  -->
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <img src="pics/logo.jpg" class="logo" height="50"
+         width="80">
+    <a class="navbar-brand" href="/">Fitness</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/bmi">BMI Calculator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/macros">Macros Calculator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/signup">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+    <!-- <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+               id="premiumsearch">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+</nav>
+
+<!-- navbar ends -->
+
+
+<div>
+    <div class="card-group" style="">
+        <div class="card">
+            <img class="card-img-top" src="pics/sports.jpg" alt="Card image cap">
+
+        </div>
+        <div class="card">
+            <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+            <div class="card-body" id="card1">
+                <h2 class="card-title" style=""><strong>Why Sports Fitness?</strong></h2>
+                <p class="card-text" style="background-image:image(burlywood); margin-top: 50px"><em>Just a few of the benefits of being
+                    physically fit:
+
+                    It increases your energy level.
+                    It boosts your mood and attitude.
+                    It helps your body adjust to even routine activities that can cause a bleed and other complications,
+                    especially in joints and muscles weakened by lack of movement.
+                </em></p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+  <!-- <h1 class="card-title backxyz"> List of sports that boosts your strength and my favourites too. </h1> -->
+
+<!-- Bodybuilding img on left -->
+
+<div>
+    <div class="card-group" style="">
+        <div class="card">
+            <img class="card-img-top" src="pics/bodybuilding.jpg" alt="Card image cap">
+
+        </div>
+        <div class="card">
+            <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+            <div class="card-body" id="card3">
+                <h2 class="card-title"><strong> <a href="https://www.bodybuilding.com/fun/what_is_bodybuilding.htm"> Bodybuilding</a>  </strong></h2>
+                <p class="card-text" style="margin-top: 70px"><em>
+        Bodybuilding makes not only a fit body, but also fit mind. The word bodybuilding says everything. It is so easy to understand the meaning of this
+        word and what this sport is about. Bodybuilding is the best sport when it comes to making your body proportionally shaped and fit.
+
+      This sport is not only about the body. More important, this great physical activity is about health, too.
+      Are you looking for health benefits of
+      weight training and aerobic exercise? Bodybuilding has it all.
+                  </em></p>
+                <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+ <!-- Blogs stored in BlogDatabase using ejs -->
+
+
+ <a href="/compose" class="btn btn-info" id="fixedbutton" role="button">+Compose</a>
+
+
+
+
+ <% for(let i =0; i<posts.length; i++) { %>
+
+
+    <!-- html part -->
+
+    <div>
+        <div class="card-group" style="">
+            <div class="card">
+                <img class="card-img-top" src="pics/cyclist.jpg" alt="Card image cap">
+
+            </div>
+            <div class="card">
+                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                <div class="card-body" id="card3">
+                    <h2 class="card-title"><strong> <a href=""><%= posts[i].title %></a>  </strong></h2>
+                    <p class="card-text" style="margin-top: 70px"><em>
+
+                  <%= posts[i].content %>
+
+                      </em></p>
+                    <p class="card-text">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- html part end -->
+
+
+
+
+
+<% } %>
+
+
+</form>
+
+</body>
+</html>
